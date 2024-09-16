@@ -196,7 +196,12 @@ const Home: React.FC = () => {
                 </form>
               ) : (
                 <div className={styles.content}>
-                  {item.notes}
+                  {item.notes.split('\n').map((line, index) => (
+                    <p key={index}>
+                      {line}
+                      <br />
+                    </p>
+                  ))}
                 </div>
               )}
 
