@@ -196,12 +196,9 @@ const Home: React.FC = () => {
                 </form>
               ) : (
                 <div className={styles.content}>
-                  {item.notes.split('\n').map((line, index) => (
-                    <p key={index}>
-                      {line}
-                      <br />
-                    </p>
-                  ))}
+                  <div style={{ whiteSpace: 'pre-line' }}>
+                    {item.notes}
+                  </div>
                 </div>
               )}
 
